@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Intelligence Community</title>
+<meta name="description" content="The Intelligence Community: electronic music by Mark Robert Henderson. Listen on Bandcamp, Spotify, Apple Music, YouTube Music, and Tidal.">
+<meta property="og:title" content="The Intelligence Community">
+<meta property="og:description" content="Electronic music. Cape Ann atmospherics and techno.">
+<meta property="og:image" content="https://theintelligencecommunity.art/cover.jpg">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://theintelligencecommunity.art/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="cover.jpg">
+<style>
+  :root {
+    --bg: #0b0d10;
+    --bg2: #050607;
+    --ink: #d9e2e6;
+    --muted: #7d8b92;
+    --line: rgba(125, 139, 146, 0.22);
+    --card: rgba(255, 255, 255, 0.035);
+    --card-hover: rgba(255, 255, 255, 0.08);
+    --signal: #4ade80;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background:
+      radial-gradient(110% 70% at 50% -5%, #141b1f 0%, var(--bg) 45%, var(--bg2) 100%);
+    color: var(--ink);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 22px 56px;
+  }
+  main {
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+  }
+  .cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.65), 0 0 0 1px var(--line);
+    margin: 4px auto 26px;
+    display: block;
+  }
+  h1 {
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+  h1 .blink {
+    color: var(--signal);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+  .subtitle {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 auto 28px;
+    max-width: 24em;
+  }
+  .links { display: flex; flex-direction: column; gap: 11px; }
+  a.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 18px;
+    border-radius: 8px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: background 140ms ease, transform 140ms ease, border-color 140ms ease;
+  }
+  a.link:hover { background: var(--card-hover); transform: translateY(-1px); border-color: rgba(125,139,146,0.45); }
+  a.link .note { color: var(--muted); font-size: 12px; font-weight: 400; }
+  a.primary {
+    background: linear-gradient(180deg, rgba(74,222,128,0.14), rgba(74,222,128,0.06));
+    border-color: rgba(74,222,128,0.45);
+  }
+  a.primary:hover { background: linear-gradient(180deg, rgba(74,222,128,0.22), rgba(74,222,128,0.10)); border-color: rgba(74,222,128,0.7); }
+  a.primary .note { color: #86efac; }
+  footer {
+    margin-top: 34px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <!-- TODO: replace with local cover.jpg before publishing (og:image and favicon expect it) -->
+  <img class="cover" src="https://f4.bcbits.com/img/0039361006_23.jpg" alt="The Intelligence Community artwork.">
+  <h1><span class="blink">&#9679;</span> The Intelligence Community</h1>
+  <p class="subtitle">Electronic music by Mark Robert Henderson.<br>Cape Ann atmospherics &middot; techno.</p>
+
+  <nav class="links">
+    <a class="link primary" href="https://theintelligencecommunity.bandcamp.com/">
+      Bandcamp <span class="note">&middot; name your price</span>
+    </a>
+    <a class="link" href="https://open.spotify.com/artist/259Hu1S5yGnC2xjr44CfnX">Spotify</a>
+    <a class="link" href="https://music.apple.com/us/artist/the-intelligence-community/1808230250">Apple Music</a>
+    <a class="link" href="https://music.youtube.com/channel/UCprDZQfqLy0uKeXj1QQWDnQ">YouTube Music</a>
+    <a class="link" href="https://tidal.com/artist/56670955">Tidal</a>
+  </nav>
+
+  <footer>
+    Latest: <em>Eastern Point</em> &middot; <em>Hesperus</em><br>
+    &copy; 2026 Clever Little Rodents
+  </footer>
+</main>
+</body>
+</html>
