@@ -13,22 +13,25 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="cover.jpg">
 <style>
+  /* Palette Forge · seed "fog" · analogous · dark · lock accent #BF7DC4 */
   :root {
-    --bg: #0b0d10;
-    --bg2: #050607;
-    --ink: #d9e2e6;
-    --muted: #7d8b92;
-    --line: rgba(125, 139, 146, 0.22);
-    --card: rgba(255, 255, 255, 0.035);
-    --card-hover: rgba(255, 255, 255, 0.08);
-    --signal: #4ade80;
+    --background: #100f11;
+    --surface: #1c1b1e;
+    --text: #f5f2f9;
+    --muted: #a9a0b4;
+    --border: #332f39;
+    --accent: #bf7dc4;
+    --accent-2: #c0b0ff;
+    --accent-hover: #cf8cd4;
+    --focus-ring: #dea8e2;
+    --card-hover: #242226;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
     background:
-      radial-gradient(110% 70% at 50% -5%, #141b1f 0%, var(--bg) 45%, var(--bg2) 100%);
-    color: var(--ink);
+      radial-gradient(110% 70% at 50% -5%, #1c1b1e 0%, var(--background) 55%, #0a090b 100%);
+    color: var(--text);
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
@@ -46,7 +49,7 @@
     height: 200px;
     border-radius: 8px;
     object-fit: cover;
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.65), 0 0 0 1px var(--line);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.65), 0 0 0 1px var(--border);
     margin: 4px auto 26px;
     display: block;
   }
@@ -58,7 +61,7 @@
     font-weight: 600;
   }
   h1 .blink {
-    color: var(--signal);
+    color: var(--accent);
     animation: pulse 2.4s ease-in-out infinite;
   }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
@@ -77,23 +80,24 @@
     gap: 8px;
     padding: 15px 18px;
     border-radius: 8px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.5px;
     transition: background 140ms ease, transform 140ms ease, border-color 140ms ease;
   }
-  a.link:hover { background: var(--card-hover); transform: translateY(-1px); border-color: rgba(125,139,146,0.45); }
+  a.link:hover { background: var(--card-hover); transform: translateY(-1px); border-color: var(--muted); }
+  a.link:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
   a.link .note { color: var(--muted); font-size: 12px; font-weight: 400; }
   a.primary {
-    background: linear-gradient(180deg, rgba(74,222,128,0.14), rgba(74,222,128,0.06));
-    border-color: rgba(74,222,128,0.45);
+    background: linear-gradient(180deg, rgba(191,125,196,0.16), rgba(191,125,196,0.07));
+    border-color: var(--accent);
   }
-  a.primary:hover { background: linear-gradient(180deg, rgba(74,222,128,0.22), rgba(74,222,128,0.10)); border-color: rgba(74,222,128,0.7); }
-  a.primary .note { color: #86efac; }
+  a.primary:hover { background: linear-gradient(180deg, rgba(191,125,196,0.24), rgba(191,125,196,0.12)); border-color: var(--accent-hover); }
+  a.primary .note { color: var(--accent-hover); }
   footer {
     margin-top: 34px;
     color: var(--muted);
@@ -101,18 +105,21 @@
     line-height: 1.7;
     letter-spacing: 0.3px;
   }
-  footer a { color: var(--muted); }
+  footer a { color: var(--accent-2); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 <main>
-  <!-- TODO: replace with local cover.jpg before publishing (og:image and favicon expect it) -->
-  <img class="cover" src="https://f4.bcbits.com/img/0039361006_23.jpg" alt="The Intelligence Community artwork.">
+  <img class="cover" src="cover.jpg" alt="The Intelligence Community artwork.">
   <h1><span class="blink">&#9679;</span> The Intelligence Community</h1>
   <p class="subtitle">Electronic music by Mark Robert Henderson.<br>Cape Ann atmospherics &middot; techno.</p>
 
   <nav class="links">
-    <a class="link primary" href="https://theintelligencecommunity.bandcamp.com/">
+    <a class="link primary" href="https://theintelligencecommunity.bandcamp.com/track/eastern-point">
+      Latest: Eastern Point <span class="note">&middot; Bandcamp</span>
+    </a>
+    <a class="link" href="https://theintelligencecommunity.bandcamp.com/">
       Bandcamp <span class="note">&middot; name your price</span>
     </a>
     <a class="link" href="https://open.spotify.com/artist/259Hu1S5yGnC2xjr44CfnX">Spotify</a>
@@ -122,7 +129,7 @@
   </nav>
 
   <footer>
-    Latest: <em>Eastern Point</em> &middot; <em>Hesperus</em><br>
+    See also: <a href="https://astraperdita.com/">astraperdita.com</a><br>
     &copy; 2026 Clever Little Rodents
   </footer>
 </main>
