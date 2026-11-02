@@ -10,6 +10,7 @@ Edit `index.html` and push to `main`. GitHub Pages redeploys automatically.
 
 ## Files
 
-- `index.html` — the page
-- `cover.jpg` — artist artwork
-- `CNAME` — custom domain for GitHub Pages
+- `index.html`: the page
+- `cover.jpg`: artist artwork
+- `CNAME`: custom domain for GitHub Pages
+- `74/`: unlisted pitch page for the 7/4 beat (`noindex`, linked from nowhere). It plays `74/tarantula.mp3`.
